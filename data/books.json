@@ -1,0 +1,211 @@
+[
+  {
+    "ID": 1,
+    "BookName": "Deadline",
+    "AuthorName": "Fern Michaels",
+    "Isbn": "978-1455812639",
+    "TotalBooks": 19,
+    "PublishDate": "2012-05-01",
+    "Category": "Sci Fi",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 2,
+    "BookName": "Secrets and Lies",
+    "AuthorName": "Lisa Jackson",
+    "Isbn": "978-1455867295",
+    "TotalBooks": 27,
+    "PublishDate": "2012-04-24",
+    "Category": "Romance",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 3,
+    "BookName": "The Sea Witch",
+    "AuthorName": "Stephen Coonts",
+    "Isbn": "978-1455893119",
+    "TotalBooks": 29,
+    "PublishDate": "2012-05-08",
+    "Category": "Suspense",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 4,
+    "BookName": "Into the Dreaming",
+    "AuthorName": "Karen Marie Moning",
+    "Isbn": "978-1455895977",
+    "TotalBooks": 25,
+    "PublishDate": "2012-04-24",
+    "Category": "Romance",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 5,
+    "BookName": "The Lost Fleet",
+    "AuthorName": "Jack Campbell",
+    "Isbn": "978-1455883516",
+    "TotalBooks": 21,
+    "PublishDate": "2012-04-24",
+    "Category": "Sci Fi",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 6,
+    "BookName": "The Hot Gate",
+    "AuthorName": "John Ringo",
+    "Isbn": "978-1455883554",
+    "TotalBooks": 23,
+    "PublishDate": "2012-04-24",
+    "Category": "Sci Fi",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 7,
+    "BookName": "The Fall",
+    "AuthorName": "Ryan Quinn",
+    "Isbn": "978-1455886234",
+    "TotalBooks": 16,
+    "PublishDate": "2012-05-01",
+    "Category": "Sci Fi",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 8,
+    "BookName": "The Burning",
+    "AuthorName": "Jane Casey",
+    "Isbn": "978-1455860913",
+    "TotalBooks": 28,
+    "PublishDate": "2012-05-08",
+    "Category": "Mystery",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 9,
+    "BookName": "To the Last Breath",
+    "AuthorName": "Francis Slakey",
+    "Isbn": "978-1455876785",
+    "TotalBooks": 17,
+    "PublishDate": "2012-05-08",
+    "Category": "Biography",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 10,
+    "BookName": "Bloodman",
+    "AuthorName": "Robert Pobi",
+    "Isbn": "978-1455842070",
+    "TotalBooks": 19,
+    "PublishDate": "2012-05-15",
+    "Category": "Mystery",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 11,
+    "BookName": "Wild Star",
+    "AuthorName": "Catherine Coulter",
+    "Isbn": "978-1455867769",
+    "TotalBooks": 23,
+    "PublishDate": "2012-05-01",
+    "Category": "Romance",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 12,
+    "BookName": "XML Developer’s Guide",
+    "AuthorName": "Matthew Gambardella",
+    "Isbn": "978-0072126488",
+    "TotalBooks": 12,
+    "PublishDate": "2000-10-01",
+    "Category": "Computer",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 13,
+    "BookName": "Midnight Rain",
+    "AuthorName": "Kim Calls",
+    "Isbn": "978-0451411754",
+    "TotalBooks": 18,
+    "PublishDate": "2000-12-16",
+    "Category": "Fantasy",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 14,
+    "BookName": "Maeve Ascendant",
+    "AuthorName": "Eva Corets",
+    "Isbn": "978-1407220116",
+    "TotalBooks": 17,
+    "PublishDate": "2000-11-17",
+    "Category": "Fantasy",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 15,
+    "BookName": "Oberon's Legacy",
+    "AuthorName": "Eva Corets",
+    "Isbn": "978-0887506178",
+    "TotalBooks": 17,
+    "PublishDate": "2001-03-10",
+    "Category": "Fantasy",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 16,
+    "BookName": "The Sundered Grail",
+    "AuthorName": "Eva Corets",
+    "Isbn": "978-0380780792",
+    "TotalBooks": 20,
+    "PublishDate": "2001-09-10",
+    "Category": "Fantasy",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 17,
+    "BookName": "Lover Birds",
+    "AuthorName": "Cynthia Randall",
+    "Isbn": "978-0764130625",
+    "TotalBooks": 29,
+    "PublishDate": "2000-09-02",
+    "Category": "Romance",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 18,
+    "BookName": "Splish Splash",
+    "AuthorName": "Paula Thurman",
+    "Isbn": "978-1910716120",
+    "TotalBooks": 12,
+    "PublishDate": "2000-11-02",
+    "Category": "Romance",
+    "BooksIssued": 0,
+    "Status": ""
+  },
+  {
+    "ID": 19,
+    "BookName": "Creepy Crawlies",
+    "AuthorName": "Stefan Knorr",
+    "Isbn": "978-0752534954",
+    "TotalBooks": 11,
+    "PublishDate": "2000-12-06",
+    "Category": "Horror",
+    "BooksIssued": 0,
+    "Status": ""
+  }
+]

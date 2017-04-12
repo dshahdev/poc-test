@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <title>POC Project </title>
+     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <script src="/lib/angular.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.min.js"></script>
+
+    <script src="/js/app.js"></script>
+    <script src="/js/controllers/mainController.js"></script>
+    <script src="/js/controllers/addDataController.js"></script>
+    <script src="/js/controllers/editDataController.js"></script>
+    <script src="/js/controllers/deleteDataController.js"></script>
+    <script src="/js/services/dataService.js"></script>
+
+    <style>
+
+        *{
+            box-sizing: border-box;
+        }
+
+        .name-brand {
+            font-size: 30px;
+            margin-left: 5%;
+            color: orange;
+        }
+
+        .my-name {
+            font-family: Arial;
+            font-style: italic;
+            padding-top: : 5px;
+            margin-left: 30px;
+            margin-right: 5%;
+            color: white;
+            font-size: 22px;
+        }
+
+        .book-table {
+            border: 2px solid orange;
+            max-width: 95%;
+            height: 200px;
+            margin-left: 3%;
+            text-align: center;
+
+        }
+        .book-details {
+            text-align: center;
+        }
+        tr:hover {
+            background-color: #f7dca8;;
+        }
+        tr {
+            cursor: pointer;
+        }
+         .button {
+            width: 112px;
+            height: 47px;
+            box-sizing: 5px;
+            background-color: #efae4c;
+            text-align: center;
+            padding: 1em;
+            align-items: center;
+            border-radius: 10px;
+            margin-right: auto;
+            margin-left: auto;
+            box-shadow: 1px 1px;
+        }
+
+        .second-div {
+            width: 600px;
+            height: 200px;
+            background-color: lightgray;
+        }
+
+        .nav_list {
+            width: 100%;
+            padding-top: 40px;
+            margin-left: 0px;
+        }
+        .nav__item {
+            display: inline-block;
+            text-align: center;
+            box-sizing: border-box;
+            /*width: 24%;*/
+            text-align: center;
+            padding: 10px;
+            text-transform: uppercase;
+        }
+
+        .nav a {
+            text-decoration: none;
+            color: #e09620;
+            padding: 1.5em;
+            font-size: 15px;
+            font-weight: bolder;
+        }
+
+
+         .form-heading,
+        .my-button{
+            background-color: #e09620;
+
+        }
+        .scrollable-box{
+
+              height: 290px;
+              overflow-y: auto;
+        }
+
+        .selected {
+          background-color: red;
+        }
+        .unSelected {
+
+        }
+
+
+    </style>
+</head>
+<body ng-controller="mainController">
+<nav class="navbar navbar-inverse">
+    <div>
+        <h1 class="name-brand">POC Project</h1>
+        <!-- <span class="proverb">POC Project..</span> -->
+        <p class=" navbar-nav my-name ">Darshana Shah</p>
+
+</nav>
+<section>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-sm-12 table-responsive scrollable-box">
+                <table class="table table-bordered book-table ">
+                    <thead>
+                        <tr >
+                            <th class="book-details">ID</th>
+                            <th class="book-details">Book Name</th>
+                            <th class="book-details">Author Name</th>
+                            <th class="book-details">ISBN </th>
+                            <th class="book-details"># of Books</th>
+                            <th class="book-details">Publish Date</th>
+                            <th class="book-details" >Category</th>
+                            <th class="book-details"># of Book Issued</th>
+                        </tr>
+                    </thead>
+
+                    <tr ng-repeat="book in bookDetails"
+                        ng-click="bookClick(book)" ng-class="{selected : book.ID === idSelected}">
+                        <td>{{book.ID}}</td>
+                        <td>{{book.BookName}}</td>
+                        <td>{{book.AuthorName}}</td>
+                        <td>{{book.Isbn}}</td>
+                        <td>{{book.TotalBooks}}</td>
+                        <td>{{book.PublishDate}}</td>
+                        <td>{{book.Category}}</td>
+                        <td>{{book.BooksIssued}}</td>
+                    </tr>
+
+                </table>
+             </div>
+        </div>
+
+        <div class="container-fluid">
+                <div class="row nav">
+
+                   <ul class="nav_list">
+                       <li class="nav__item"><a ui-sref="add">Add</a></li>
+                       <li class="nav__item"><a ui-sref="edit">Edit</a></li>
+                       <li class="nav__item"><a ui-sref="delete">Delete</a></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                 <div class="col-sm-12">
+                    <!-- <h1>Book Details Input</h1> -->
+                    <div ui-view></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</section>
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
