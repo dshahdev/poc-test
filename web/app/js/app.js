@@ -6,7 +6,6 @@ app.config(['$stateProvider', function($stateProvider,$urlRouter){
 
     $stateProvider
 
-
     .state('add',{
         url: '/add',
         templateUrl: 'partials/addData.html',
@@ -15,6 +14,7 @@ app.config(['$stateProvider', function($stateProvider,$urlRouter){
 
     .state('edit',{
         url: '/edit',
+        params: { param1: null},
         templateUrl: 'partials/editData.html',
         controller: 'editDataController'
     })

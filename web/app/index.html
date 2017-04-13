@@ -15,12 +15,14 @@
     <script src="/js/controllers/editDataController.js"></script>
     <script src="/js/controllers/deleteDataController.js"></script>
     <script src="/js/services/dataService.js"></script>
+    <script src="/js/services/addDataService.js"></script>
 
     <style>
 
         *{
             box-sizing: border-box;
         }
+
 
         .name-brand {
             font-size: 30px;
@@ -32,7 +34,7 @@
             font-family: Arial;
             font-style: italic;
             padding-top: : 5px;
-            margin-left: 30px;
+            margin-left: 5%;
             margin-right: 5%;
             color: white;
             font-size: 22px;
@@ -86,7 +88,7 @@
             box-sizing: border-box;
             /*width: 24%;*/
             text-align: center;
-            padding: 10px;
+            padding: 5px;
             text-transform: uppercase;
         }
 
@@ -105,18 +107,22 @@
 
         }
         .scrollable-box{
-
-              height: 290px;
-              overflow-y: auto;
+            height: 290px;
+            overflow-y: auto;
         }
 
         .selected {
           background-color: red;
         }
-        .unSelected {
 
+        .headings {
+            text-align: center;
         }
 
+        .line {
+            width: 98%;
+            border: solid 2px lightgray !important;
+        }
 
     </style>
 </head>
@@ -162,17 +168,23 @@
              </div>
         </div>
 
-        <div class="container-fluid">
-                <div class="row nav">
 
+
+        <div class="container-fluid">
+                <div class="col-sm-4"></div>
+                <div class="nav col-sm-4">
                    <ul class="nav_list">
                        <li class="nav__item"><a ui-sref="add">Add</a></li>
-                       <li class="nav__item"><a ui-sref="edit">Edit</a></li>
+                       <li class="nav__item"><a ui-sref="edit({param1: selectedBook})">Edit</a></li>
                        <li class="nav__item"><a ui-sref="delete">Delete</a></li>
                    </ul>
                 </div>
+                <div class="col-sm-4"></div>
             </div>
         </div>
+
+        <hr class="line" />
+
         <div class="container-fluid">
             <div class="row">
                  <div class="col-sm-12">
