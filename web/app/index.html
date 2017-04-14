@@ -4,6 +4,8 @@
     <title>POC Project </title>
      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+     <link rel="stylesheet" type="text/css" href="/css/mycss.css">
+     <link rel="stylesheet" type="text/css" href="/css/myResponsive.css">
 
     <script src="/lib/angular.js"></script>
 
@@ -14,115 +16,16 @@
     <script src="/js/controllers/addDataController.js"></script>
     <script src="/js/controllers/editDataController.js"></script>
     <script src="/js/controllers/deleteDataController.js"></script>
+    <script src="/js/controllers/transactionController.js"></script>
+
     <script src="/js/services/dataService.js"></script>
     <script src="/js/services/addDataService.js"></script>
+    <script src="/js/services/editDataService.js"></script>
+    <script src="/js/services/tranDataService.js"></script>
 
     <style>
 
-        *{
-            box-sizing: border-box;
-        }
 
-
-        .name-brand {
-            font-size: 30px;
-            margin-left: 5%;
-            color: orange;
-        }
-
-        .my-name {
-            font-family: Arial;
-            font-style: italic;
-            padding-top: : 5px;
-            margin-left: 5%;
-            margin-right: 5%;
-            color: white;
-            font-size: 22px;
-        }
-
-        .book-table {
-            border: 2px solid orange;
-            max-width: 95%;
-            height: 200px;
-            margin-left: 3%;
-            text-align: center;
-
-        }
-        .book-details {
-            text-align: center;
-        }
-        tr:hover {
-            background-color: #f7dca8;;
-        }
-        tr {
-            cursor: pointer;
-        }
-         .button {
-            width: 112px;
-            height: 47px;
-            box-sizing: 5px;
-            background-color: #efae4c;
-            text-align: center;
-            padding: 1em;
-            align-items: center;
-            border-radius: 10px;
-            margin-right: auto;
-            margin-left: auto;
-            box-shadow: 1px 1px;
-        }
-
-        .second-div {
-            width: 600px;
-            height: 200px;
-            background-color: lightgray;
-        }
-
-        .nav_list {
-            width: 100%;
-            padding-top: 40px;
-            margin-left: 0px;
-        }
-        .nav__item {
-            display: inline-block;
-            text-align: center;
-            box-sizing: border-box;
-            /*width: 24%;*/
-            text-align: center;
-            padding: 5px;
-            text-transform: uppercase;
-        }
-
-        .nav a {
-            text-decoration: none;
-            color: #e09620;
-            padding: 1.5em;
-            font-size: 15px;
-            font-weight: bolder;
-        }
-
-
-         .form-heading,
-        .my-button{
-            background-color: #e09620;
-
-        }
-        .scrollable-box{
-            height: 290px;
-            overflow-y: auto;
-        }
-
-        .selected {
-          background-color: red;
-        }
-
-        .headings {
-            text-align: center;
-        }
-
-        .line {
-            width: 98%;
-            border: solid 2px lightgray !important;
-        }
 
     </style>
 </head>
@@ -145,10 +48,11 @@
                             <th class="book-details">Book Name</th>
                             <th class="book-details">Author Name</th>
                             <th class="book-details">ISBN </th>
-                            <th class="book-details"># of Books</th>
+                            <th class="book-details">Total Books</th>
                             <th class="book-details">Publish Date</th>
                             <th class="book-details" >Category</th>
-                            <th class="book-details"># of Book Issued</th>
+                            <th class="book-details">Books Issued</th>
+                            <th class="book-details">Status</th>
                         </tr>
                     </thead>
 
@@ -162,26 +66,42 @@
                         <td>{{book.PublishDate}}</td>
                         <td>{{book.Category}}</td>
                         <td>{{book.BooksIssued}}</td>
+                        <td>{{}}</td>
+
                     </tr>
 
                 </table>
              </div>
         </div>
 
+         <hr class="line" />
 
+        <!-- <div class="container-fluid links-space">
 
-        <div class="container-fluid">
-                <div class="col-sm-4"></div>
-                <div class="nav col-sm-4">
+                <div class="nav">
                    <ul class="nav_list">
                        <li class="nav__item"><a ui-sref="add">Add</a></li>
                        <li class="nav__item"><a ui-sref="edit({param1: selectedBook})">Edit</a></li>
                        <li class="nav__item"><a ui-sref="delete">Delete</a></li>
+                       <li class="nav__item"><a ui-sref="transactions({param2: selectedBook})">Transactions</a></li>
                    </ul>
                 </div>
-                <div class="col-sm-4"></div>
+
             </div>
-        </div>
+        </div> -->
+
+        <nav class="navbar">
+          <div class="container-fluid ">
+
+            <ul class="nav navbar-nav ">
+              <li class="nav__item"><a ui-sref="add">Add</a></li>
+              <li class="nav__item"><a ui-sref="edit({param1: selectedBook})">Edit</a></li>
+              <li class="nav__item"><a ui-sref="delete">Delete</a></li>
+              <li class="nav__item"><a ui-sref="transactions({param2: selectedBook})">Transactions</a></li>
+            </ul>
+          </div>
+        </nav>
+
 
         <hr class="line" />
 

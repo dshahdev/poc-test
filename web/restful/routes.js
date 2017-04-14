@@ -1,4 +1,6 @@
 var persistence = require('./models/persistence');
+var tran = require('./models/tran-persistence');
+
 
 module.exports = {
 
@@ -14,6 +16,10 @@ module.exports = {
 
         app.post('/restful/persistence/editbook', function(req, res){
             persistence.editBook(req, res);
+        });
+
+        app.get('/restful/tran/gettrandata', function(req, res){
+            tran.getTranData(req, res);
         });
 
     }

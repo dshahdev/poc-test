@@ -25,6 +25,13 @@ app.config(['$stateProvider', function($stateProvider,$urlRouter){
         controller: 'deleteDataController'
     })
 
+    .state('transactions',{
+        url: '/transactions',
+        params: { param2: null},
+        templateUrl: 'partials/transactionData.html',
+        controller: 'transactionController'
+    })
+
     .state('otherwise',{
         url:'/'
     })

@@ -7,6 +7,7 @@ app.controller("mainController", function($scope, dataService, $rootScope, $stat
     $scope.idSelected = null;
     $scope.selectedBook = null;
     $scope.lastBookID = 0;
+    $scope.editBookElement = "";
 
     $scope.$on('bookAdded', function(event, args) {
 
@@ -16,6 +17,22 @@ app.controller("mainController", function($scope, dataService, $rootScope, $stat
 
         $state.go('otherwise');
     });
+
+    $scope.$on('number of books are changed', function(event, args) {
+
+        $scope.editedRow = args;
+        console.log("edited data " + JSON.stringify($scope.editedRow));
+        console.log("selectedRow: "+ JSON.stringify($scope.selectedBook.TotalBooks));
+
+        $scope.selectedBook.TotalBooks = $scope.editedRow.TotalBooks;
+
+        console.log("bookDetails >> Array: "+JSON.stringify($scope.bookDetails));
+
+        // for(var i = 0; i < bookDetails.length; i++) {
+
+        // }
+
+    })
 
     $scope.getBooksData = function() {
         dataService.getBooksData().then(
@@ -27,7 +44,6 @@ app.controller("mainController", function($scope, dataService, $rootScope, $stat
                     $scope.bookClick($scope.bookDetails[0]);
                     $scope.lastBookID = $scope.bookDetails[$scope.bookDetails.length - 1].ID;
                     console.log("id: "+$scope.lastBookID);
-
 
                 }
 

@@ -1,4 +1,10 @@
-
+<div class="form-group">
+        <label  class="control-label col-sm-4" >
+        </label>
+        <div class="col-sm-6">
+            <h3 class="heading">Edit Book:</h3>
+        </div>
+</div>
 <div class="container">
 
     <form  class="form-horizontal">
@@ -15,7 +21,7 @@
         <label class="control-label col-sm-3" for="aName">Author's Name:
         </label>
         <div class="col-sm-9">
-           <input type="text" class="form-control" id="authorName" placeholder="Autor Name" ng-model="newBook.AuthorName">
+           <label type="text" class="form-control" id="authorName">{{editBook.AuthorName}}</label>
         </div>
       </div>
 
@@ -25,7 +31,7 @@
           ISBN No:
         </label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" id="isdn" placeholder="ISBN number" ng-model="newBook.Isbn">
+            <label type="text" class="form-control" id="isdn">{{editBook.Isbn}}</label>
         </div>
       </div>
 
@@ -35,7 +41,7 @@
         <label class="control-label col-sm-3" for="numBook">Total Books:
         </label>
         <div class="col-sm-9">
-            <input type="number" class="form-control" id="numBook" placeholder="Number of Books" ng-model="newBook.TotalBooks">
+            <input type="number" class="form-control" id="numBook" placeholder="Number of Books" ng-model="editBook.TotalBooks">
         </div>
       </div>
 
@@ -45,7 +51,7 @@
         <label class="control-label col-sm-3" for="pubDate">Publish Date:
         </label>
         <div class="col-sm-9">
-            <input  class="form-control" id="apubDate" placeholder="Publish Date" ng-model="newBook.PublishDate" ng-bind="newBook.PublishDate | date:'yyyy-MM-dd'">
+            <label  class="form-control" id="apubDate">{{editBook.PublishDate}}</label>
         </div>
       </div>
 
@@ -54,7 +60,7 @@
         <label class="control-label col-sm-3" for="cate">Category:
         </label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" id="cate" placeholder="Category" ng-model="newBook.Category">
+            <label type="text" class="form-control" id="cate">{{editBook.Category}}</label>
         </div>
       </div>
 
@@ -63,7 +69,7 @@
         <label  class="control-label col-sm-3" for="issBook">Issued Books:
         </label>
         <div class="col-sm-9">
-            <input type="text" class="form-control" id="issBook" placeholder="Number of book issued" ng-model="newBook.BooksIssued">
+            <label type="text" class="form-control" id="issBook">{{editBook.BooksIssued}}</label>
         </div>
       </div>
 
@@ -74,12 +80,10 @@
         <label  class="control-label col-sm-4" for="issBook">
         </label>
         <div class="col-sm-8">
-            <button type="submit" class="btn my-button" ng-click="addData()">Submit</button>
+            <button type="submit" class="btn my-button" ng-click="editData()">Submit</button>
         </div>
       </div>
 
-    <div class="col-sm-8">
-          <button type="submit" class="btn my-button" ng-click="fillData()">Fill</button>
-      </div>
+
     </form>
 <div>

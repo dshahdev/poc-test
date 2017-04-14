@@ -1,0 +1,55 @@
+
+
+
+@media screen and (max-width: 468px) {
+
+    .my-name {
+        font-family: Arial;
+        font-style: italic;
+        padding-top: : 5px;
+        margin-left: 5%;
+        margin-right: 5%;
+        color: white;
+        font-size: 22px;
+    }
+
+    .name-brand {
+        font-size: 1.6em;
+        margin-left: 5%;
+        color: orange;
+    }
+
+   .book-table {
+        border: 2px solid orange;
+        width: 50%;
+        height: 200px;
+        margin-left: 3%;
+        text-align: center;
+
+    }
+
+    .links-space {
+         height: 56px;
+         width: 100%;
+         background-color: #ffc966;
+         border-radius: 20px;
+    }
+
+    .nav__item {
+
+        display: inline-block;
+
+        box-sizing: border-box;
+
+        text-transform: uppercase;
+    }
+
+    .nav a {
+        text-decoration: none;
+        color: #e09620;
+        /*color: #8c5b0c;*/
+        padding: 1.5em;
+        font-size: .8em;
+        font-weight: bolder;
+    }
+}

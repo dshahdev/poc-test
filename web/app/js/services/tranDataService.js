@@ -1,10 +1,10 @@
 'use strict';
 
-app.factory("dataService",['$http','$q', function($http, $q, $rootscope){
+app.factory("tranDataService",['$http','$q', function($http, $q, $rootscope){
 
-    function getBooksData() {
+    function getTransactions() {
         var request = $http({
-            url:"/restful/persistence/getbookdata",
+            url:"/restful/tran/gettrandata",
             method: "GET"
         });
 
@@ -27,7 +27,7 @@ app.factory("dataService",['$http','$q', function($http, $q, $rootscope){
     }
 
     return {
-        getBooksData: getBooksData
+        getTransactions: getTransactions
     }
 
-}])
+}]);

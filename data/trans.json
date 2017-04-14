@@ -1,0 +1,6 @@
+[ {"ID":1,"BookID":1,"TranDate":"2017-04-01","TranType":"I","GroupID":1},
+{"ID":2,"BookID":3,"TranDate":"2017-04-02","TranType":"I","GroupID":2},
+{"ID":3,"BookID":5,"TranDate":"2017-04-01","TranType":"I","GroupID":3},
+{"ID":4,"BookID":3,"TranDate":"2017-04-03","TranType":"I","GroupID":4},
+{"ID":5,"BookID":1,"TranDate":"2017-04-04","TranType":"R","GroupID":1}
+]

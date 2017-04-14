@@ -1,0 +1,40 @@
+
+
+<div class="container-fluid">
+
+    <div class="row">
+        <div class="col-sm-2"></div>
+
+        <div class="col-sm-8 table-responsive scrollable-box">
+            <h3 class="heading">Transaction Details:</h3>
+            <table class="table table-bordered book-table ">
+                <thead>
+                    <tr >
+                        <th class="book-details">Book ID</th>
+                        <th class="book-details">Issue Date</th>
+                        <th class="book-details">Return Date </th>
+
+                    </tr>
+                </thead>
+
+                <tr ng-repeat="trans in currentTrans"
+                    ng-click="transClick(trans)" ng-class="{selected : trans.ID === idSelected}">
+                        <td>{{trans.BookID}}</td>
+                        <td>{{trans.IssueDate}}</td>
+                        <td>{{trans.ReturnDate}}</td>
+
+                </tr>
+
+            </table>
+
+        </div>
+        <div class="col-sm-6 btn-place">
+                <button type="submit" class="btn my-button" ng-click="issueBook()">Issue</button>
+            </div>
+            <div class="col-sm-6 ">
+                <button type="submit" class="btn my-button" ng-click="returnBook()">Return</button>
+            </div>
+        <div class="col-sm-2">
+        </div>
+    </div>
+</div>

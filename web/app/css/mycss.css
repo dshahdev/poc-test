@@ -1,0 +1,127 @@
+*{
+    box-sizing: border-box;
+}
+
+
+.name-brand {
+    font-size: 30px;
+    margin-left: 5%;
+    color: orange;
+}
+
+.my-name {
+    font-family: Arial;
+    font-style: italic;
+    padding-top: : 5px;
+    margin-left: 5%;
+    margin-right: 5%;
+    color: white;
+    font-size: 22px;
+}
+
+.book-table {
+    border: 2px solid orange;
+    width: 95%;
+    height: 200px;
+    margin-left: 3%;
+    text-align: center;
+
+}
+.book-details {
+    text-align: center;
+}
+tr:hover {
+    /*background-color: #f7dca8;;*/
+    background-color: #fbecd0;
+}
+tr {
+    cursor: pointer;
+}
+ .button {
+    width: 112px;
+    height: 47px;
+    box-sizing: 5px;
+    background-color: #efae4c;
+    text-align: center;
+    padding: 1em;
+    align-items: center;
+    border-radius: 10px;
+    margin-right: auto;
+    margin-left: auto;
+    box-shadow: 1px 1px;
+}
+
+.second-div {
+    width: 600px;
+    height: 200px;
+    background-color: lightgray;
+}
+
+.nav_list {
+    width: 100%;
+    padding-top: 12px;
+    margin-left: 20%;
+}
+.nav__item {
+    display: inline-block;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 5px;
+    text-transform: uppercase;
+    float: none;
+
+}
+
+
+
+.nav a {
+    text-decoration: none;
+    color: #e09620;
+    /*color: #8c5b0c;*/
+    padding: 1.5em;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+.nav a:hover{
+     color: #8c5b0c;
+}
+
+.links-space {
+     height: 56px;
+     width: 95%;
+     /*background-color: orange;*/
+     background-color: #ffc966;
+     border-radius: 20px;
+
+ /*.form-heading,*/
+}
+.my-button{
+    background-color: orange;
+    color: #8c5b0c;
+    text-transform: uppercase;
+
+}
+.scrollable-box{
+    height: 290px;
+    overflow-y: auto;
+}
+
+.selected {
+  background-color: #bc7a10;
+  color:white;
+  font-size: 1.3em;
+}
+
+.headings {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.line {
+    width: 98%;
+    border: solid 2px lightgray !important;
+}
+.btn-place {
+    text-align: right;
+}
