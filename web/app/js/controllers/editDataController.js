@@ -1,12 +1,12 @@
 'use strict';
 
-app.controller("editDataController", ['$scope','$stateParams','editDataService','$rootScope', function($scope, $stateParams, editDataService, $rootScope){
+app.controller("editDataController", ['$scope','$stateParams','editDataService','$rootScope','$state', function($scope, $stateParams, editDataService, $rootScope, $state){
 
     $scope.editBook = $stateParams.param1;
 
     console.log("selectedID: "+ JSON.stringify($scope.editBook));
 
-    $scope.$on('idSelected', function(event, args) {
+    $scope.$on('bookSelectionChanged', function(event, args) {
 
         $scope.editBook = args;
 
@@ -30,11 +30,17 @@ app.controller("editDataController", ['$scope','$stateParams','editDataService',
                 // brod  $scope.editBook
                 console.log(JSON.stringify(editObj));
 
-                $rootScope.$broadcast("number of books are changed", $scope.editBook);
+                $rootScope.$broadcast("bookEdited", $scope.editBook);
 
             }, function(error){
-
+                 console.log("error: "+error);
             })
+
+    };
+
+    $scope.closeEdit = function(){
+        alert("You have cencelled edit book transaction.....");
+        $state.go('otherwise');
 
     }
 

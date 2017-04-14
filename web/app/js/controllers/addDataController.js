@@ -1,4 +1,4 @@
-app.controller("addDataController", ['$scope','addDataService', '$rootScope', function($scope, addDataService, $rootScope){
+app.controller("addDataController", ['$scope','addDataService', '$rootScope','$state', function($scope, addDataService, $rootScope, $state){
 
 
     function Book(id, bName, aName, isb, tBooks,pDate, cate, issBook, status) {
@@ -34,11 +34,16 @@ app.controller("addDataController", ['$scope','addDataService', '$rootScope', fu
 
 
             }, function(error){
-
+                 console.log("error: "+error);
             })
 
     }
 
+    $scope.closeAdd = function(){
+        alert("You have cencelled add book transaction.....");
+        $state.go('otherwise');
+
+    }
     $scope.fillData = function() {
         $scope.newBook = new Book(0,"bn","an","Isbn",10,"2017-01-01","Thriller",2,"");
     }

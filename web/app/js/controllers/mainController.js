@@ -9,28 +9,24 @@ app.controller("mainController", function($scope, dataService, $rootScope, $stat
     $scope.lastBookID = 0;
     $scope.editBookElement = "";
 
+    $scope.$on('bookTransUpdated', function(event, args) {
+
+        $scope.selectedBook.Status = args.Status;
+        $scope.selectedBook.BooksIssued = args.BooksIssued;
+
+    });
+
     $scope.$on('bookAdded', function(event, args) {
 
         $scope.bookDetails.push(args);
-
-        console.log("book added in AddController, now adding in the list as well ID is " + args.ID);
-
         $state.go('otherwise');
+
     });
 
-    $scope.$on('number of books are changed', function(event, args) {
+    $scope.$on('bookEdited', function(event, args) {
 
         $scope.editedRow = args;
-        console.log("edited data " + JSON.stringify($scope.editedRow));
-        console.log("selectedRow: "+ JSON.stringify($scope.selectedBook.TotalBooks));
-
         $scope.selectedBook.TotalBooks = $scope.editedRow.TotalBooks;
-
-        console.log("bookDetails >> Array: "+JSON.stringify($scope.bookDetails));
-
-        // for(var i = 0; i < bookDetails.length; i++) {
-
-        // }
 
     })
 
@@ -50,7 +46,7 @@ app.controller("mainController", function($scope, dataService, $rootScope, $stat
 
             }, function(error){
 
-
+                console.log("error: "+error);
             });
 
     }
@@ -63,9 +59,14 @@ app.controller("mainController", function($scope, dataService, $rootScope, $stat
         $scope.idSelected = book.ID;
         $scope.selectedBook = book;
         //broadcast
-        $rootScope.$broadcast('idSelected',book);
+        $rootScope.$broadcast('bookSelectionChanged',book);
 
     };
+
+    $scope.deleteRow = function(selectedBook) {
+
+        console.log("selectedBook in delete: " + selectedBook);
+    }
 
     $scope.getBooksData();
 })

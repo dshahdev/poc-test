@@ -17,7 +17,7 @@
                     </tr>
                 </thead>
 
-                <tr ng-repeat="trans in currentTrans"
+                <tr ng-repeat="trans in TransForBook"
                     ng-click="transClick(trans)" ng-class="{selected : trans.ID === idSelected}">
                         <td>{{trans.BookID}}</td>
                         <td>{{trans.IssueDate}}</td>
@@ -28,11 +28,20 @@
             </table>
 
         </div>
-        <div class="col-sm-6 btn-place">
-                <button type="submit" class="btn my-button" ng-click="issueBook()">Issue</button>
+        <div class="col-sm-4 btn-place">
+                <button type="submit" class="btn my-button" ng-click="doTransaction('I')" 
+                ng-disabled="selectedBook == null ||
+                                (selectedBook.TotalBooks - selectedBook.BooksIssued) <= 0">Issue</button>
             </div>
-            <div class="col-sm-6 ">
-                <button type="submit" class="btn my-button" ng-click="returnBook()">Return</button>
+
+            
+            <div class="col-sm-4 ">
+                <button type="submit" class="btn my-button" ng-click="doTransaction('R')" 
+                       ng-disabled="selectedTranObj == null || 
+                                    selectedTranObj.ReturnDate != '' ">Return</button>
+            </div>
+            <div class="col-sm-4 ">
+                <button type="submit" class="btn my-button" ng-click="closeTrans()">Close </button>
             </div>
         <div class="col-sm-2">
         </div>

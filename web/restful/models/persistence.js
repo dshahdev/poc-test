@@ -17,7 +17,6 @@ function Persistence() {
             res.send(obj);
         })
 
-
     };
 
     this.addBook = function(req, res) {
@@ -69,16 +68,13 @@ function Persistence() {
                     res.send({status: 1, message: 'write to json file failed, filename is ' + BOOK_FILE});
                 } else {
                      res.send({status: 0, message: "write after edit done"});
-                    // // res.send({status: 0, editedBook: bookCache[bookCache.length - 1] });
-                    // res.send({status: 0, editedBook: bookToEdit});
                 }
             }
         )
     }
 
-
+    this.getBookCache = function() { return bookCache; };
 
 }
+
 module.exports = new Persistence();
-
-

@@ -30,10 +30,11 @@
 .book-details {
     text-align: center;
 }
-tr:hover {
-    /*background-color: #f7dca8;;*/
+/*tr:hover {
+    background-color: #f7dca8;;
     background-color: #fbecd0;
-}
+}*/
+
 tr {
     cursor: pointer;
 }
@@ -124,4 +125,7 @@ tr {
 }
 .btn-place {
     text-align: right;
+}
+.dimmer {
+    background-size: lightgray;
 }
